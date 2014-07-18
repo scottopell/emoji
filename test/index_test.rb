@@ -24,4 +24,10 @@ describe Emoji::Index do
       assert "🌀".match(regex)
     end
   end
+
+  describe "get_random" do
+    it "should return an emoji" do
+      assert !index.get_random["name"].nil?
+    end
+  end
 end

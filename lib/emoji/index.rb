@@ -5,7 +5,7 @@ module Emoji
         emoji_json = File.read(File.absolute_path(File.dirname(__FILE__) + '/../../config/index.json'))
         JSON.parse(emoji_json)
       end
-      
+
       @emoji_by_name = {}
       @emoji_by_moji = {}
 
@@ -29,6 +29,10 @@ module Emoji
 
     def unicode_moji_regex
       @emoji_moji_regex
+    end
+
+    def get_random
+      @emoji_by_name[@emoji_by_name.keys.sample]
     end
   end
 end
