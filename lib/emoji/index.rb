@@ -32,7 +32,7 @@ module Emoji
     end
 
     def get_random
-      until !(rnd = @emoji_by_name[@emoji_by_name.keys.sample])["moji"].nil? do
+      until (rnd = @emoji_by_name[@emoji_by_name.keys.sample]).has_key?("moji") do
       end
       rnd
     end

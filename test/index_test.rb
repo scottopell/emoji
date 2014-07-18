@@ -28,6 +28,7 @@ describe Emoji::Index do
   describe "get_random" do
     it "should return an emoji" do
       assert !index.get_random["name"].nil?
+      assert !index.get_random["moji"].nil?
     end
   end
 end
